@@ -1,0 +1,10 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/home/user/Documentos/clickProject/myApp/www/js/app.js",
+        "/home/user/Documentos/clickProject/myApp/gulpfile.js",
+        "/home/user/Documentos/clickProject/myApp/hooks/after_platform_add/010_install_plugins.js",
+        "/home/user/Documentos/clickProject/myApp/hooks/after_plugin_rm/010_deregister_plugin.js",
+        "/home/user/Documentos/clickProject/myApp/www/js/utils.js",
+        "/home/user/Documentos/clickProject/myApp/www/js/controllers.js"
+    ]
+}

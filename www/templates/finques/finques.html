@@ -1,0 +1,25 @@
+<ion-view view-title="Llista finques">
+  <ion-nav-bar align-title="center" class="bar-positive">
+    <ion-nav-buttons side="left">
+      <button class="button icon ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button icon ion-plus-round " ng-click="openModalAfegir()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-nav-view name="menuContent"></ion-nav-view>
+
+  <ion-content>
+      <!-- <p>
+      <ion-spinner icon="android"></ion-spinner>
+    </p> -->
+    <ion-list type="list-inset">
+      <ion-item ng-repeat="finca in Finques track by finca.Id" href="#/app/visita-llista/{{finca.Id}}/{{finca.Nom}}" class="item text-center">
+        {{finca.Nom}}
+        <ion-option-button class="button-energized ion-edit" ng-click="openModalEditar($index)"></ion-option-button>
+        <ion-option-button class="button-assertive ion-trash-a" ng-click="eliminarFinca($index)"></ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

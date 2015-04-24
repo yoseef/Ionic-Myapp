@@ -1,0 +1,21 @@
+<ion-view view-title="llista visites">
+  <ion-content>
+    <div class="list">
+      <a ng-repeat="v in Visites" href="#" class="item item-thumbnail-left">
+        <img ng-src="v.Fotos[0]">
+        <h2 ng-bind="v.Data">17/02/2015</h2>
+        <p ng-bind="v.Observ">alguna observacio sobre la visita...</p>
+      </a>
+      <!-- <a href="#" class="item item-thumbnail-left">
+        <img src="../img/ionic.png">
+        <h2>16/02/2015</h2>
+        <p>un altre observacio sobre la visita...</p>
+      </a>
+      <a href="#" class="item item-thumbnail-left">
+        <img src="../img/ionic.png">
+        <h2>15/02/2015</h2>
+        <p>alguna altre observacio sobre la visita...</p>
+      </a> -->
+    </div>
+  </ion-content>
+</ion-view>

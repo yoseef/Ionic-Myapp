@@ -1,0 +1,38 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-calm">
+    <h1 class="title">editar la finca </h1>
+    <button class="button icon-right ion-close-round" ng-click="closeModalEditar()">
+    </button>
+  </ion-header-bar>
+
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Nom de la finca</span>
+        <input type="text" placeholder="Nom" ng-model="finca.Nom">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Descripcio de la finca</span>
+        <textarea placeholder="Descripcio" ng-model="finca.Descripcio"></textarea>
+      </label>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap" ng-click="getCurrentPosition()">
+        <div ng-show="!errorGps">
+          <p class="icon ion-location">
+            <span ng-show="finca.Pos.lat != 0 && finca.Pos.long != 0">
+              Coordenades : {{finca.Pos.lat}} , {{finca.Pos.long}}
+            </span>
+            <span ng-show="finca.Pos.lat == 0 && finca.Pos.long == 0"> Obtenir coordenades </span>
+          </p>
+        </div>
+        <div ng-show="errorGps">
+          <p class="icon ion-location"> Error de gps, tap to try again!</p>
+        </div>
+      </div>
+    </div>
+    <button class="button button-full button-balanced" ng-click="editarFinca();closeModalEditar()">
+      Guardar canvis
+    </button>
+  </ion-content>
+</ion-modal-view>

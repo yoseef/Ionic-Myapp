@@ -1,0 +1,48 @@
+<ion-view view-title="Editar visita">
+  <ion-nav-bar align-title="center" class="bar bar-header bar-positive">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="Observacio..." ng-model="visita.Observ">
+      </label>
+    </div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <span class="input-label">Data</span>
+        <input type="date" ng-model="visita.Data">
+      </label>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap" ng-click="getCurrentPosition()">
+        <div ng-show="!errorGps">
+          <p class="icon ion-location">
+            <span ng-show="visita.position.lat != 0 && visita.position.long != 0">Coordenades : {{visita.position.lat}} , {{visita.position.long}}</span>
+            <span ng-show="visita.position.lat == 0 && visita.position.long == 0"> Obtenir coordenades </span>
+          </p>
+        </div>
+        <div ng-show="errorGps">
+          <p class="icon ion-location"> Error de gps, tap to try again!</p>
+        </div>
+      </div>
+    </div>
+    <div ng-show="imatges" class="has-header padding">
+      <div class="item item-divider">
+        <i class="ion-images"></i> My Images
+      </div>
+      <a class="item item-list-detail">
+        <ion-scroll direction="x">
+          <img ng-repeat="f in visita.Fotos" ng-src="{{f}}" ng-click="showImages($index)" class="image-list-thumb" />
+        </ion-scroll>
+      </a>
+    </div>
+    <div class="list list-inset">
+      <button class="button button-block button-stable icon ion-images" ng-click="imatges = !imatges"></button>
+      <button class="button button-block button-stable icon ion-android-camera" ng-click="capture()"></button>
+      <button class="button button-block button-calm" ng-click="guardarVisita()">Guardar Visita</button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -16,6 +16,12 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true" />
   </feature>
-  <!-- <gap:plugin name="org.apache.cordova.camera" version="0.3.7" source="plugins.cordova.io" />
-  <gap:plugin name="org.apache.cordova.geolocation" version="0.3.11" source="plugins.cordova.io" /> -->
+  <feature name="camera">
+    <param name="android-package" value="org.apache.cordova.camera" />
+  </feature>
+  <feature name="geolocation">
+    <param name="android-package" value="org.apache.cordova.geolocation" />
+  </feature>
+  <!-- <gap:plugin name="org.apache.cordova.camera"/> -->
+  <!-- <gap:plugin name="org.apache.cordova.geolocation" version="0.3.11" source="plugins.cordova.io" /> -->
 </widget>

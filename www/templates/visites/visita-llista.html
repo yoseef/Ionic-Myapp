@@ -1,4 +1,4 @@
-<ion-view  view-title="{{name}}">
+<ion-view view-title="{{name}}">
   <ion-nav-bar align-title="center" class="bar bar-header bar-positive">
     <ion-nav-back-button class="button-clear">
       <i class="ion-arrow-left-c"></i> Back
@@ -14,16 +14,21 @@
         <p ng-bind="v.Coor">localitzacio</p>
       </div>
       <div class="item item-body">
-        <div class="row">
+        <a class="item item-thumbnail-left" href="#">
+          <img ng-src="{{v.Fotos[0]}}">
+          <h2>Observacio:</h2>
+          <p>{{v.Observ}}</p>
+        </a>
+        <!-- <div class="row">
             <img class="col col-25" ng-src="{{v.Fotos[0]}}">
             <p class="col col-75" ng-bind="v.Observ">
               Observacions ...
             </p>
-        </div>
+        </div> -->
       </div>
       <div class="item tabs tabs-secondary tabs-icon-left">
         <a class="tab-item" ng-click="eliminar($index);">
-          <i class="icon ion-close"n></i>
+          <i class="icon ion-close" n></i>
         </a>
         <a class="tab-item" href="#/app/visites/editar/{{v.Id_Finca}}/{{name}}/{{$index}}">
           <i class="icon ion-edit"></i>

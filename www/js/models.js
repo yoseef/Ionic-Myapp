@@ -1,18 +1,3 @@
-// var finca = {
-//     Id: 0,
-//     Nom: "",
-//     Data: new Date(),
-//     Descripcio: "",
-//     Coor: {
-//       lat: 0,
-//       long: 0
-//     }
-// };
-//
-// var coor ={
-//   lat: 0,
-//   long: 0
-// } ;
 function Finca () {
     this.Id = 0,
     this.Nom = "",

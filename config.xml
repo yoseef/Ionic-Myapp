@@ -7,8 +7,6 @@
   <author email="hi@ionicframework" href="http://ionicframework.com/">
     Ionic Framework Team
   </author>
-  <gap:plugin name="org.apache.cordova.camera" version="0.3.7" source="plugins.cordova.io" />
-  <gap:plugin name="org.apache.cordova.geolocation" version="0.3.11" source="plugins.cordova.io" />
   <content src="index.html" />
   <access origin="*" />
   <preference name="webviewbounce" value="false" />
@@ -18,4 +16,6 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true" />
   </feature>
+  <!-- <gap:plugin name="org.apache.cordova.camera" version="0.3.7" source="plugins.cordova.io" />
+  <gap:plugin name="org.apache.cordova.geolocation" version="0.3.11" source="plugins.cordova.io" /> -->
 </widget>
